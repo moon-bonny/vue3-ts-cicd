@@ -1,0 +1,53 @@
+@use "sass:math";
+
+@charset "utf-8";
+/**
+ *  Create Date: 2016-09-05
+ *  Note:  变量声明初始化
+ */
+
+// Variables base
+$bg-primary: #417ff9;
+
+$textColorPrimary: #1b2531;
+$text-color-grey: #a0a5af;
+$textColorGrey: rgba(27, 37, 49, 0.7);
+
+$text-line-color-primary: #f8a325;
+
+$border-color-primary: #e8e9f4;
+
+$btn-color-primary: #4bd9a3;
+$btn-color-grey: #c7c7c7;
+
+// component variables
+// v-dialog
+$dialogWidth: 776px;
+// $defaultDialogHeight: 496px;
+$dialogClsBtnColor: #b4b8c7;
+
+// v-button
+$buttonMinWidth: 190px;
+$buttonPadding: 14px;
+$buttonBoderColor: #3571ff;
+$buttonRadius: 6px;
+
+$buttonPrimaryColor: linear-gradient(136deg, #5f8fff 0%, #3370ff 100%);
+$buttonTextColor: $buttonBoderColor;
+$buttonTextFontSize: 18px;
+/* $buttonHoverColor: $buttonBoderColor;
+$buttonBorderHoverColor: $buttonBoderColor; */
+
+// v-line-text
+$lineTextHeight: 18px; // 线高度
+$lineTextPaddingLeft: 10px;
+$lineTextFontSize: 18px;
+$lineTextColor: $textColorGrey;
+// 线
+$lineTextLineWidth: 4px;
+// $lineTextLineHeight: 18px;
+$lineTextLineColor: #437bff;
+
+// 卡片
+$cardSize: 60px;
+$cardCircleSize: 28px;

@@ -1,0 +1,6 @@
+# 构建目录
+dist/
+/node_modules/
+/public/
+.vscode
+.idea

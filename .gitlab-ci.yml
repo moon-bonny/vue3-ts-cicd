@@ -1,0 +1,49 @@
+image: node
+
+# 设置缓存
+cache:
+  paths:
+    - node_modules/
+
+stages:
+  - eslint
+  - build
+  - changelog
+  - deploy
+
+eslint:
+  stage: eslint
+  tags:
+    - vite
+  script:
+    - npm install
+    - npm run lint
+    - echo "eslint pass！"
+
+build:
+  stage: build
+  tags:
+    - vite
+  script:
+    - npm run build
+    - echo "build success！"
+
+changelog:
+  stage: changelog
+  tags:
+    - vite
+  script:
+    - sh ./ci/changelog.sh
+  only:
+    - master
+
+deploy:
+  stage: deploy
+  image: docker
+  tags:
+    - vite
+  script:
+    - docker build -t folive .
+    - if [ $(docker ps -aq --filter name=mylive-container) ]; then docker rm -f mylive-container;fi
+    - docker run -d -p 8001:80 --name mylive-container folive
+    - echo 'deploy docker image success. visit http://120.79.76.143:8001'

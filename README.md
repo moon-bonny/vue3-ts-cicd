@@ -27,8 +27,9 @@ npm run lint
 npm run build
 ```
 
-## 目录说明
+## 目录
 
+```
 vue3-ts-cicd
 ├─.commitlintrc.js   commitlint规则
 ├─.eslintignore
@@ -53,3 +54,4 @@ vue3-ts-cicd
 |   ├─_
 |   | ├─.gitignore
 |   | └husky.sh
+```

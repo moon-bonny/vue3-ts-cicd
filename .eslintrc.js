@@ -14,8 +14,8 @@ module.exports = {
     ecmaVersion: 2017
   },
   rules: {
-    // 禁止使用 var
-    'no-var': 'error',
+    // 全局变量允许使用 var
+    'no-var': 'off',
     'prettier/prettier': 'error',
     '@typescript-eslint/no-unused-vars': ['error']
   },

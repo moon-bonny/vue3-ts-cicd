@@ -1,18 +1,27 @@
 <script setup lang="ts">
-import { ref } from "vue";
-import Dialog from "./Dialog.vue";
+import { ref } from 'vue'
+import Dialog from './Dialog.vue'
 
-let dialogVisible = ref<boolean>(false);
+let dialogVisible = ref<boolean>(false)
 
-let text = ref<string>("立即体验");
+let text = ref<string>('立即体验')
 
 function onTap() {
-  dialogVisible.value = true;
+  dialogVisible.value = true
 }
 
 function onConfirm() {
-  console.log("page confirm");
+  console.log('page confirm')
 }
+
+// 全局类型
+let num1: T1 = 1
+// 全局变量
+window.userId = '1'
+globalThis.age = 18
+age = 20
+
+console.log(userId, num1, age)
 </script>
 
 <template>

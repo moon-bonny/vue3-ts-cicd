@@ -2,7 +2,7 @@ import { defineConfig } from 'vite'
 import vue from '@vitejs/plugin-vue'
 import eslintPlugin from 'vite-plugin-eslint'
 // import fs from 'fs';
-import path from "path"
+import path from 'path'
 
 // let httpsConfig = {
 //   key: fs.readFileSync("C:/Users/ca/wps.cn/_wildcard.wps.cn+3-key.pem"),
@@ -20,7 +20,7 @@ export default defineConfig({
   },
   resolve: {
     alias: {
-      "@": path.resolve(__dirname, "src")
+      '@': path.resolve(__dirname, 'src')
     }
   },
   css: {

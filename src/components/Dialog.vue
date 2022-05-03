@@ -1,10 +1,11 @@
 <script setup lang="ts">
-let props = defineProps({
+defineProps({
   modelValue: { type: Boolean, default: false },
-  title: { type: String, default: "弹窗提示" },
-  msg: { type: String, default: "弹窗信息" },
-});
+  title: { type: String, default: '弹窗提示' },
+  msg: { type: String, default: '弹窗信息' }
+})
 
+console.log(userId, age)
 /* interface Props {
   modelValue?: boolean
   title?: string
@@ -18,26 +19,26 @@ let props = withDefaults(defineProps<Props>(), {
 }); */
 
 const emit = defineEmits<{
-  (e: "update:modelValue", visible: boolean): boolean;
-  (e: "cancel"): void;
-  (e: "confirm"): void;
-}>();
+  (e: 'update:modelValue', visible: boolean): boolean
+  (e: 'cancel'): void
+  (e: 'confirm'): void
+}>()
 
-console.log("emit事件", emit);
+console.log('emit事件', emit)
 function hide() {
-  emit("update:modelValue", false);
+  emit('update:modelValue', false)
 }
 
 function onCancel() {
-  console.log("点击取消");
-  emit("cancel");
-  hide();
+  console.log('点击取消')
+  emit('cancel')
+  hide()
 }
 
 function onConfirm() {
-  console.log("点击确定");
-  emit("confirm");
-  hide();
+  console.log('点击确定')
+  emit('confirm')
+  hide()
 }
 </script>
 

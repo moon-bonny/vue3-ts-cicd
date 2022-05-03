@@ -1,6 +1,7 @@
 {
   "name": "my-vue-app",
   "version": "0.0.0",
+  "types": "./test.d.ts",
   "scripts": {
     "dev": "vite",
     "lint": "npx eslint src/**/*.{js,jsx,vue,ts,tsx} --fix",
